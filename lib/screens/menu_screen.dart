@@ -20,9 +20,9 @@ class _MenuScreenState extends State<MenuScreen> {
         builder: (context){
           return RatingDialog(
             image: Image.asset("assets/images/todo_icon.jpeg", height: 100) ,
-            title: "Tasks Todo",
-            message: "How much do you love our app ?",
-            submitButton: "Rate",
+            title: Text("Tasks Todo"),
+            message: Text("How much do you love our app ?"),
+            submitButtonText: "Rate",
             onSubmitted: (response){
               print('rating : ${response.rating}');
             },

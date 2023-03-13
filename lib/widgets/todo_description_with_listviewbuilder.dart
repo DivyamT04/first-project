@@ -25,7 +25,7 @@ class _TodoDescriptionListViewBuilderState extends State<TodoDescriptionListView
     super.initState();
     tz.initializeTimeZones();
     var androidInitilize = new AndroidInitializationSettings('todo_icon');
-    var iOSinitilize = new IOSInitializationSettings();
+    var iOSinitilize = new DarwinInitializationSettings();
     var initilizationsSettings =
     new InitializationSettings(android: androidInitilize, iOS: iOSinitilize);
     //fltrNotification = new FlutterLocalNotificationsPlugin();
@@ -148,9 +148,9 @@ class _TodoDescriptionListViewBuilderState extends State<TodoDescriptionListView
   }
   Future _showNotification(value) async {
     var androidDetails = new AndroidNotificationDetails(
-        "Channel ID", "Divyam programmer", "This is my channel",
+        "Channel ID", "Divyam programmer",
         importance: Importance.high);
-    var iSODetails = new IOSNotificationDetails();
+    var iSODetails = new DarwinNotificationDetails();
     var generalNotificationDetails =
     new NotificationDetails(android: androidDetails, iOS: iSODetails);
 
